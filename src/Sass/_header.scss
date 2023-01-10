@@ -1,0 +1,110 @@
+nav {
+    @include set-background($primary-color);
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    box-shadow: 0 2px 20px 2px rgb(0 0 0 / 25%);
+    
+    .container {
+        display: flex;
+        width: 100%;
+    }
+
+    .logo {
+        text-decoration: none;
+        color: set-color($primary-color);
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        svg {
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+    .menu {
+        margin-left: auto;
+
+    ul {
+        display: flex;
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            margin: 0 1rem;
+
+            a {
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                }
+            } 
+        }
+    }
+    .hamburger {
+        color: set-color($primary-color);
+        border: 0;
+        height: 40px;
+        width: 40px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        display: none;
+
+        &:hover {
+            @include set-background(lighten($primary-color, 10%));
+        }
+
+        svg {
+            height: 1.5rem;
+            width: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        .hamburger {
+            display: block;
+        }
+        .menu ul {
+            position: absolute;
+            top: 60px;
+            left: 0;
+            flex-direction: column;
+            width: 100%;
+            height: calc(100vh - 77px);
+            @include set-background(lighten($primary-color, 10%));
+            display: none;
+
+            li {
+                text-align: center;
+                margin: 0;
+
+                &:hover {
+                    background-color: (lighten($primary-color, 20%));
+                }
+
+                a {
+                    color: black;
+                    width: 100%;
+                    padding: 1.5rem 0;
+                }
+            }
+        }
+        .menu.expanded ul {
+            display: block;
+        }
+    }
+}
+

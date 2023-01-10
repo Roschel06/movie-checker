@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Regular.eot');
+    src: url('../fonts/PublicSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+        url('../fonts/PublicSans-Regular.woff') format('woff'),
+        url('../fonts/PublicSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Light.eot');
+    src: url('../fonts/PublicSans-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PublicSans-Light.woff2') format('woff2'),
+        url('../fonts/PublicSans-Light.woff') format('woff'),
+        url('../fonts/PublicSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-SemiBold.eot');
+    src: url('../fonts/PublicSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/PublicSans-SemiBold.woff2') format('woff2'),
+        url('../fonts/PublicSans-SemiBold.woff') format('woff'),
+        url('../fonts/PublicSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
