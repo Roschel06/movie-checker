@@ -1,6 +1,6 @@
-export default function Input({value, onChange}){
+export default function Input({placeholder, value, onChange}){
 
     return(
-        <input placeholder="Search for movie title" value={value} onChange={onChange}/>
+        <input placeholder={placeholder} value={value} onChange={onChange}/>
     )
 }
