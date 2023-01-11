@@ -1,0 +1,32 @@
+$primary-color: #3b1970;
+//$primary-color: #dbcfee;
+$secondary-color: #2a7019;
+
+//Set text color based on background
+@function set-color($color) {
+    @if(lightness($color)>70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+//Set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-color($color);
+}
+
+//Margin & padding classes
+$spaceamounts: (1,2,3,4);
+
+@each $space in $spaceamounts {
+    .m-#{$space} {
+        margin: #{$space}rem;
+    }
+    .my-#{$space} {
+        margin: #{$space}rem 0;
+    }
+    .mx-#{$space} {
+        margin: 0 #{$space}rem;
+    }
+}

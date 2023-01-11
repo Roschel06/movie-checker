@@ -1,0 +1,4 @@
+footer {
+    @include set-background($primary-color);
+    padding: 0.5rem 0rem;
+}

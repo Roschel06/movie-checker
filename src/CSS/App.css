@@ -1,3 +1,222 @@
-.App-link {
-  color: #61dafb;
+.m-1 {
+  margin: 1rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.mx-1 {
+  margin: 0 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.mx-2 {
+  margin: 0 2rem;
+}
+
+.m-3 {
+  margin: 3rem;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.mx-3 {
+  margin: 0 3rem;
+}
+
+.m-4 {
+  margin: 4rem;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.mx-4 {
+  margin: 0 4rem;
+}
+
+.container {
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+@media (min-width: 1100px) {
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+nav {
+  background-color: #3b1970;
+  color: #fff;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  box-shadow: 0 2px 20px 2px rgba(0, 0, 0, 0.25);
+}
+nav .container {
+  display: flex;
+  width: 100%;
+}
+nav .logo {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+nav .logo svg {
+  height: 2rem;
+  width: 2rem;
+}
+nav .menu {
+  margin-left: auto;
+}
+nav .menu ul {
+  display: flex;
+  padding: 0;
+}
+nav .menu ul li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+nav .menu ul li a {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+nav .hamburger {
+  color: #fff;
+  border: 0;
+  height: 40px;
+  width: 40px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  display: none;
+}
+nav .hamburger:hover {
+  background-color: #51229a;
+  color: #fff;
+}
+nav .hamburger svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  nav .hamburger {
+    display: block;
+  }
+  nav .menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: #51229a;
+    color: #fff;
+    display: none;
+  }
+  nav .menu ul li {
+    text-align: center;
+    margin: 0;
+  }
+  nav .menu ul li:hover {
+    background-color: #672cc3;
+  }
+  nav .menu ul li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  nav .menu.expanded ul {
+    display: block;
+  }
+}
+footer {
+  background-color: #3b1970;
+  color: #fff;
+  padding: 0.5rem 0rem;
+}
+
+.btn-secondary, .btn-primary {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin: 4px;
+  text-decoration: none;
+}
+.btn-secondary:hover, .btn-primary:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #51229a;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #2a7019;
+  color: #fff;
+}
+
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Regular.eot");
+  src: url("../fonts/PublicSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-Regular.woff2") format("woff2"), url("../fonts/PublicSans-Regular.woff") format("woff"), url("../fonts/PublicSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-Light.eot");
+  src: url("../fonts/PublicSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-Light.woff2") format("woff2"), url("../fonts/PublicSans-Light.woff") format("woff"), url("../fonts/PublicSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Public Sans";
+  src: url("../fonts/PublicSans-SemiBold.eot");
+  src: url("../fonts/PublicSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/PublicSans-SemiBold.woff2") format("woff2"), url("../fonts/PublicSans-SemiBold.woff") format("woff"), url("../fonts/PublicSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Public Sans", sans-serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
 }
