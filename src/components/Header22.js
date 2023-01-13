@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { BiCameraMovie } from 'react-icons/bi';
 import { RxHamburgerMenu, RxCross1 } from 'react-icons/rx';
 import {useEffect, useState} from 'react'
-export default function Header() {
+export default function Header22() {
 
     const [isNavExpanded, setIsNavExpanded] = useState(false)
     const [genreList, setGenreList] = useState()

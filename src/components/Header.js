@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import { BiCameraMovie } from 'react-icons/bi';
 import {useEffect, useState} from 'react'
 import { menuItems } from '../menuItems';
+import {useThemeUpdate, useGenreList} from './Context'
 
 export default function Header2() {
-    
-    const [genreList, setGenreList] = useState()
+    const toggleTheme = useThemeUpdate()
+    useGenreList()
+/*     const [genreList, setGenreList] = useState()
     
     useEffect(()=>{
         const getData = async () =>{
@@ -28,28 +30,21 @@ export default function Header2() {
     let genreArray = []
 
     const genreLinkList = async () => {
+        if(genreList){
         for ( let i of genreList){
-            genreArray.push(Object.values(i)[1])
+            
+            let genre = {}
+
+            genre.title = Object.values(i)[1]
+            genre.url = genre.title.toLowerCase()
+
+            genreArray.push(genre)
         }
-        console.log("🚀 ~ newArray", genreArray)
-    
-        const toObject= {...genreArray};
-    
-    console.log("The converted array to object is:", toObject);
+        console.log("🚀 ~ genreArray", genreArray)
 
-
-    /* NEXT STEP => add new key value pair for link path to objects  */
-
-/*     toObject.map((item, idx) => ({...item, bla: idx.name}))
-console.log("New 2:", toObject); */
-    
-/*  menuItems.push(...genreList)
-    console.log("🚀 ~ menuItems changed", menuItems)
- */
-
+        }
     }
-    genreLinkList()
-
+    genreLinkList() */
 
 
 
@@ -60,6 +55,7 @@ console.log("New 2:", toObject); */
                 <BiCameraMovie /><span>Movie Checker</span>
             </Link>
             <Navbar />
+            <button onClick={toggleTheme}>Theme</button>
             </div>
         </header>
     );
