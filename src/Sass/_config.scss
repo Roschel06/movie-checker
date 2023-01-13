@@ -1,6 +1,8 @@
 $primary-color: #3b1970;
 //$primary-color: #dbcfee;
 $secondary-color: #2a7019;
+$neutral-dark-color: #212529;
+$neutral-light-color: #bdbdbd;
 
 //Set text color based on background
 @function set-color($color) {

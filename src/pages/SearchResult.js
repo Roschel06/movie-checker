@@ -37,7 +37,7 @@ export default function SearchResult() {
                 <Input placeholder='Search for movie title' value={input} onChange={e => setInput(e.target.value)} />
                 <Button type="submit" styling="btn-secondary" text="Search"/>
             </form>
-            <div className='container'>
+            <div className='container card-grid'>
                 {movieList.map((item, key) => <Card key={key} item={item} />)}
             </div>
         </div>

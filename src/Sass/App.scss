@@ -4,6 +4,12 @@
 @import 'footer';
 @import 'buttons';
 @import 'fonts';
+@import 'card';
+@import 'movieDetails';
+
+* {
+    box-sizing: border-box;
+}
 body {
     border: none;
 	margin: 0;
@@ -14,7 +20,4 @@ body {
 }
 a {
     text-decoration: none;
-}
-.card {
-    background: rgb(238, 196, 196),
 }
