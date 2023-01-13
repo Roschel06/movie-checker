@@ -1,0 +1,26 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(20% - 1.5rem), 1fr));
+    gap: 3rem 1.5rem;
+    
+    .card {
+        box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.19);
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        .no-img {
+            background: #bababa;
+            aspect-ratio: 2/3;
+        }
+
+        .card-text {
+            padding: 0.75rem 1rem 1rem;
+            font-size: 0.9rem;
+            color: $neutral-dark-color
+        }
+    }
+}

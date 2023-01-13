@@ -1,20 +1,27 @@
 import './Sass/App.scss';
 import {Routes, Route} from 'react-router-dom'
-import Header from './components/Header';
 import Imprint from './pages/Imprint';
 import Home from './pages/Home';
-import Footer from './components/Footer';
+import SearchResult from './pages/SearchResult';
+import Movie from './components/Movie';
+import Layout from './components/Layout';
+import ContextProvider from './components/Context';
+import GenreResult from './pages/GenreResult';
+
 
 function App() {
   return (
-    <>
-      <Header />
+    <ContextProvider>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/imprint' element={<Imprint />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path='/imprint' element={<Imprint />} />
+          <Route path='/searchresult/:query' element={<SearchResult />} />
+          <Route path='/movie/:id' element={<Movie />} />
+          <Route path='/genre/:id' element={<GenreResult />} />
+        </Route>
       </Routes>
-      <Footer />
-    </>
+    </ContextProvider>
   );
 }
 

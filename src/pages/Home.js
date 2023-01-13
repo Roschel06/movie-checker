@@ -1,15 +1,16 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-
+import Search from '../components/Search'
 export default function Home() {
+
   return (
     <div className='container'>
-      <section>
+       <section>
         <Link to='/' className='btn-secondary'>
           New Movies 
         </Link>
       </section>
-      <div className='m-1'>next topic</div>
+      <Search />
     </div>
   )
 }
